@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SafariNavigation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="461-dO-NYS">
+                                <rect key="frame" x="0.0" y="732" width="414" height="30"/>
+                                <state key="normal" title="Ultima Noticia"/>
+                                <connections>
+                                    <action selector="openSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xe-ou-aTc"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bm-wR-1MQ">
+                                <rect key="frame" x="20" y="377" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-iF-YCK">
+                                <rect key="frame" x="20" y="452" width="374" height="30"/>
+                                <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="buscarVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z3N-QG-doU"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="youtube-logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="96d-uz-njW">
+                                <rect key="frame" x="90" y="162" width="234" height="205"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uMn-iF-YCK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0Qc-RM-Nwy"/>
+                            <constraint firstItem="461-dO-NYS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Uh-pE-iIX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uMn-iF-YCK" secondAttribute="trailing" constant="20" id="6O5-uG-WDb"/>
+                            <constraint firstItem="96d-uz-njW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="OrX-fJ-2U9"/>
+                            <constraint firstItem="6bm-wR-1MQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ROP-hs-HFa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6bm-wR-1MQ" secondAttribute="trailing" constant="20" id="SMM-ng-ebF"/>
+                            <constraint firstItem="96d-uz-njW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="WuL-UR-G6k"/>
+                            <constraint firstItem="uMn-iF-YCK" firstAttribute="top" secondItem="6bm-wR-1MQ" secondAttribute="bottom" constant="45" id="Zry-Xr-h9k"/>
+                            <constraint firstItem="6bm-wR-1MQ" firstAttribute="top" secondItem="96d-uz-njW" secondAttribute="bottom" constant="10" id="epd-dc-cGO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="96d-uz-njW" secondAttribute="trailing" constant="90" id="f1v-de-6XY"/>
+                            <constraint firstItem="461-dO-NYS" firstAttribute="top" secondItem="uMn-iF-YCK" secondAttribute="bottom" constant="250" id="n7N-vS-Ke8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="461-dO-NYS" secondAttribute="trailing" id="q3k-uG-mzX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="461-dO-NYS" secondAttribute="bottom" constant="100" id="u54-Gt-UhN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lbBusca" destination="6bm-wR-1MQ" id="6v0-ag-8qi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="youtube-logo-1" width="5000" height="2085"/>
+    </resources>
+</document>
